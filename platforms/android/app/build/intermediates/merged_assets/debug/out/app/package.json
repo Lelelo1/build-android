@@ -1,0 +1,10 @@
+{
+    "name": "@nativescript/template-blank-react",
+    "id": "org.nativescript.myapp",
+    "appResourcesPath": "App_Resources",
+    "android": {
+        "v8Flags": "--expose_gc",
+        "markingMode": "none"
+    },
+    "main": "bundle"
+}
