@@ -27,6 +27,7 @@ export function HomeScreen({ navigation }: HomeScreenProps) {
                     for(let key in com.facebook){
                             console.log(key);
                     }
+                    com.facebook.react.
                 }}
             >
                 Tap me for an alert
