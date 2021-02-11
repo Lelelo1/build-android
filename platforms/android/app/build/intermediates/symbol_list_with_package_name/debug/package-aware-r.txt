@@ -23,8 +23,12 @@ anim btn_radio_to_off_mtrl_ring_outer_path_animation
 anim btn_radio_to_on_mtrl_dot_group_animation
 anim btn_radio_to_on_mtrl_ring_outer_animation
 anim btn_radio_to_on_mtrl_ring_outer_path_animation
+anim catalyst_fade_in
+anim catalyst_fade_out
 anim catalyst_push_up_in
 anim catalyst_push_up_out
+anim catalyst_slide_down
+anim catalyst_slide_up
 anim design_bottom_sheet_slide_in
 anim design_bottom_sheet_slide_out
 anim design_snackbar_in
@@ -89,7 +93,9 @@ attr actionProviderClass
 attr actionTextColorAlpha
 attr actionViewClass
 attr activityChooserViewStyle
+attr actualImageResource
 attr actualImageScaleType
+attr actualImageUri
 attr alertDialogButtonGroupStyle
 attr alertDialogCenterButtons
 attr alertDialogStyle
@@ -520,13 +526,18 @@ attr retryImageScaleType
 attr reverseLayout
 attr rippleColor
 attr roundAsCircle
+attr roundBottomEnd
 attr roundBottomLeft
 attr roundBottomRight
+attr roundBottomStart
+attr roundTopEnd
 attr roundTopLeft
 attr roundTopRight
+attr roundTopStart
 attr roundWithOverlayColor
 attr roundedCornerRadius
 attr roundingBorderColor
+attr roundingBorderPadding
 attr roundingBorderWidth
 attr scrimAnimationDuration
 attr scrimBackground
@@ -738,6 +749,7 @@ color cardview_dark_background
 color cardview_light_background
 color cardview_shadow_end_color
 color cardview_shadow_start_color
+color catalyst_logbox_background
 color catalyst_redbox_background
 color checkbox_themeable_attribute_color
 color design_bottom_navigation_shadow_color
@@ -1361,6 +1373,7 @@ drawable notification_template_icon_bg
 drawable notification_template_icon_low_bg
 drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
+drawable redbox_top_border_background
 drawable splash_screen
 drawable test_custom_background
 drawable tooltip_frame_dark
@@ -1376,6 +1389,7 @@ id SYM
 id TOP_END
 id TOP_START
 id accessibility_action_clickable_span
+id accessibility_actions
 id accessibility_custom_action_0
 id accessibility_custom_action_1
 id accessibility_custom_action_10
@@ -1408,6 +1422,11 @@ id accessibility_custom_action_6
 id accessibility_custom_action_7
 id accessibility_custom_action_8
 id accessibility_custom_action_9
+id accessibility_hint
+id accessibility_label
+id accessibility_role
+id accessibility_state
+id accessibility_value
 id action0
 id action_bar
 id action_bar_activity_content
@@ -1490,6 +1509,7 @@ id fill_horizontal
 id fill_vertical
 id filled
 id filter_chip
+id fitBottomStart
 id fitCenter
 id fitEnd
 id fitStart
@@ -1576,12 +1596,18 @@ id pin
 id progress_circular
 id progress_horizontal
 id radio
+id react_test_id
 id right
 id right_icon
 id right_side
 id rn_frame_file
 id rn_frame_method
-id rn_redbox_reloadjs
+id rn_redbox_dismiss_button
+id rn_redbox_line_separator
+id rn_redbox_loading_indicator
+id rn_redbox_reload_button
+id rn_redbox_report_button
+id rn_redbox_report_label
 id rn_redbox_stack
 id rounded
 id save_non_transition_alpha
@@ -1669,6 +1695,8 @@ id unlabeled
 id up
 id useLogo
 id view_offset_helper
+id view_tag_instance_handle
+id view_tag_native_id
 id visible
 id visible_removing_fragment_view_tag
 id withText
@@ -1692,6 +1720,8 @@ integer mtrl_card_anim_delay_ms
 integer mtrl_card_anim_duration_ms
 integer mtrl_chip_anim_duration
 integer mtrl_tab_indicator_anim_duration_ms
+integer react_native_dev_server_port
+integer react_native_inspector_proxy_port
 integer show_password_duration
 integer status_bar_notification_info_maxnum
 interpolator btn_checkbox_checked_mtrl_animation_interpolator_0
@@ -1749,6 +1779,7 @@ layout design_navigation_menu
 layout design_navigation_menu_item
 layout design_text_input_end_icon
 layout design_text_input_start_icon
+layout dev_loading_view
 layout error_activity
 layout exception_tab
 layout fps_view
@@ -1843,40 +1874,58 @@ string abc_searchview_description_voice
 string abc_shareactionprovider_share_with
 string abc_shareactionprovider_share_with_application
 string abc_toolbar_collapse_description
+string alert_description
 string app_name
 string appbar_scrolling_view_behavior
 string bottom_sheet_behavior
-string catalyst_debugjs
-string catalyst_debugjs_off
-string catalyst_element_inspector
-string catalyst_element_inspector_off
-string catalyst_hot_module_replacement
-string catalyst_hot_module_replacement_off
-string catalyst_jsload_error
-string catalyst_jsload_message
-string catalyst_jsload_title
-string catalyst_live_reload
-string catalyst_live_reload_off
+string button_description
+string catalyst_change_bundle_location
+string catalyst_copy_button
+string catalyst_debug
+string catalyst_debug_chrome
+string catalyst_debug_chrome_stop
+string catalyst_debug_connecting
+string catalyst_debug_error
+string catalyst_debug_nuclide
+string catalyst_debug_nuclide_error
+string catalyst_debug_stop
+string catalyst_dismiss_button
+string catalyst_heap_capture
+string catalyst_hot_reloading
+string catalyst_hot_reloading_auto_disable
+string catalyst_hot_reloading_auto_enable
+string catalyst_hot_reloading_stop
+string catalyst_inspector
+string catalyst_loading_from_url
 string catalyst_perf_monitor
-string catalyst_perf_monitor_off
-string catalyst_reloadjs
-string catalyst_remotedbg_error
-string catalyst_remotedbg_message
+string catalyst_perf_monitor_stop
+string catalyst_reload
+string catalyst_reload_button
+string catalyst_reload_error
+string catalyst_report_button
+string catalyst_sample_profiler_disable
+string catalyst_sample_profiler_enable
 string catalyst_settings
 string catalyst_settings_title
-string catalyst_start_profile
-string catalyst_stop_profile
 string character_counter_content_description
 string character_counter_overflowed_content_description
 string character_counter_pattern
 string chip_text
 string clear_text_end_icon_content_description
+string combobox_description
 string error_icon_content_description
 string exposed_dropdown_menu_content_description
 string fab_transformation_scrim_behavior
 string fab_transformation_sheet_behavior
+string header_description
 string hide_bottom_view_on_scroll_behavior
 string icon_content_description
+string image_description
+string imagebutton_description
+string link_description
+string menu_description
+string menubar_description
+string menuitem_description
 string mtrl_badge_numberless_content_description
 string mtrl_chip_close_icon_content_description
 string mtrl_exceed_max_badge_number_suffix
@@ -1916,14 +1965,31 @@ string path_password_eye
 string path_password_eye_mask_strike_through
 string path_password_eye_mask_visible
 string path_password_strike_through
+string progressbar_description
+string radiogroup_description
+string rn_tab_description
+string scrollbar_description
+string search_description
 string search_menu_title
+string spinbutton_description
+string state_busy_description
+string state_collapsed_description
+string state_expanded_description
+string state_mixed_description
+string state_off_description
+string state_on_description
 string status_bar_notification_info_overflow
+string summary_description
+string tablist_description
+string timer_description
 string title_activity_kimera
+string toolbar_description
 style AlertDialog_AppCompat
 style AlertDialog_AppCompat_Light
 style Animation_AppCompat_Dialog
 style Animation_AppCompat_DropDownUp
 style Animation_AppCompat_Tooltip
+style Animation_Catalyst_LogBox
 style Animation_Catalyst_RedBox
 style Animation_Design_BottomSheetDialog
 style Animation_MaterialComponents_BottomSheetDialog
@@ -2138,9 +2204,15 @@ style Base_Widget_MaterialComponents_PopupMenu_Overflow
 style Base_Widget_MaterialComponents_TextInputEditText
 style Base_Widget_MaterialComponents_TextInputLayout
 style Base_Widget_MaterialComponents_TextView
+style CalendarDatePickerDialog
+style CalendarDatePickerStyle
 style CardView
 style CardView_Dark
 style CardView_Light
+style ClockTimePickerDialog
+style ClockTimePickerStyle
+style DialogAnimationFade
+style DialogAnimationSlide
 style EmptyTheme
 style LaunchScreenTheme
 style LaunchScreenThemeBase
@@ -2209,7 +2281,11 @@ style ShapeAppearanceOverlay_MaterialComponents_TextInputLayout_FilledBox
 style ShapeAppearanceOverlay_TopLeftCut
 style ShapeAppearanceOverlay_TopRightDifferentCornerSize
 style SpinnerDatePicker
+style SpinnerDatePickerDialog
+style SpinnerDatePickerStyle
 style SpinnerTimePicker
+style SpinnerTimePickerDialog
+style SpinnerTimePickerStyle
 style Test_ShapeAppearanceOverlay_MaterialComponents_MaterialCalendar_Day
 style Test_Theme_MaterialComponents_MaterialCalendar
 style Test_Widget_MaterialComponents_MaterialCalendar
@@ -2328,6 +2404,7 @@ style Theme_AppCompat_Light_DialogWhenLarge
 style Theme_AppCompat_Light_NoActionBar
 style Theme_AppCompat_NoActionBar
 style Theme_Catalyst
+style Theme_Catalyst_LogBox
 style Theme_Catalyst_RedBox
 style Theme_Design
 style Theme_Design_BottomSheetDialog
@@ -2335,6 +2412,9 @@ style Theme_Design_Light
 style Theme_Design_Light_BottomSheetDialog
 style Theme_Design_Light_NoActionBar
 style Theme_Design_NoActionBar
+style Theme_FullScreenDialog
+style Theme_FullScreenDialogAnimatedFade
+style Theme_FullScreenDialogAnimatedSlide
 style Theme_MaterialComponents
 style Theme_MaterialComponents_BottomSheetDialog
 style Theme_MaterialComponents_Bridge
@@ -2609,6 +2689,7 @@ style Widget_MaterialComponents_Toolbar_Primary
 style Widget_MaterialComponents_Toolbar_PrimarySurface
 style Widget_MaterialComponents_Toolbar_Surface
 style Widget_Support_CoordinatorLayout
+style redboxButton
 styleable ActionBar background backgroundSplit backgroundStacked contentInsetEnd contentInsetEndWithActions contentInsetLeft contentInsetRight contentInsetStart contentInsetStartWithNavigation customNavigationLayout displayOptions divider elevation height hideOnContentScroll homeAsUpIndicator homeLayout icon indeterminateProgressStyle itemPadding logo navigationMode popupTheme progressBarPadding progressBarStyle subtitle subtitleTextStyle title titleTextStyle
 styleable ActionBarLayout android_layout_gravity
 styleable ActionMenuItemView android_minWidth
@@ -2652,7 +2733,7 @@ styleable FontFamilyFont android_font android_fontWeight android_fontStyle andro
 styleable ForegroundLinearLayout android_foreground android_foregroundGravity foregroundInsidePadding
 styleable Fragment android_name android_id android_tag
 styleable FragmentContainerView android_name android_tag
-styleable GenericDraweeView actualImageScaleType backgroundImage fadeDuration failureImage failureImageScaleType overlayImage placeholderImage placeholderImageScaleType pressedStateOverlayImage progressBarAutoRotateInterval progressBarImage progressBarImageScaleType retryImage retryImageScaleType roundAsCircle roundBottomLeft roundBottomRight roundTopLeft roundTopRight roundWithOverlayColor roundedCornerRadius roundingBorderColor roundingBorderWidth viewAspectRatio
+styleable GenericDraweeHierarchy actualImageScaleType backgroundImage fadeDuration failureImage failureImageScaleType overlayImage placeholderImage placeholderImageScaleType pressedStateOverlayImage progressBarAutoRotateInterval progressBarImage progressBarImageScaleType retryImage retryImageScaleType roundAsCircle roundBottomEnd roundBottomLeft roundBottomRight roundBottomStart roundTopEnd roundTopLeft roundTopRight roundTopStart roundWithOverlayColor roundedCornerRadius roundingBorderColor roundingBorderPadding roundingBorderWidth viewAspectRatio
 styleable GradientColor android_startColor android_endColor android_type android_centerX android_centerY android_gradientRadius android_tileMode android_centerColor android_startX android_startY android_endX android_endY
 styleable GradientColorItem android_color android_offset
 styleable LinearLayoutCompat android_gravity android_orientation android_baselineAligned android_baselineAlignedChildIndex android_weightSum divider dividerPadding measureWithLargestChild showDividers
@@ -2682,6 +2763,7 @@ styleable ScrimInsetsFrameLayout insetForeground
 styleable ScrollingViewBehavior_Layout behavior_overlapTop
 styleable SearchView android_focusable android_maxWidth android_inputType android_imeOptions closeIcon commitIcon defaultQueryHint goIcon iconifiedByDefault layout queryBackground queryHint searchHintIcon searchIcon submitBackground suggestionRowLayout voiceIcon
 styleable ShapeAppearance cornerFamily cornerFamilyBottomLeft cornerFamilyBottomRight cornerFamilyTopLeft cornerFamilyTopRight cornerSize cornerSizeBottomLeft cornerSizeBottomRight cornerSizeTopLeft cornerSizeTopRight
+styleable SimpleDraweeView actualImageResource actualImageScaleType actualImageUri backgroundImage fadeDuration failureImage failureImageScaleType overlayImage placeholderImage placeholderImageScaleType pressedStateOverlayImage progressBarAutoRotateInterval progressBarImage progressBarImageScaleType retryImage retryImageScaleType roundAsCircle roundBottomEnd roundBottomLeft roundBottomRight roundBottomStart roundTopEnd roundTopLeft roundTopRight roundTopStart roundWithOverlayColor roundedCornerRadius roundingBorderColor roundingBorderPadding roundingBorderWidth viewAspectRatio
 styleable Snackbar snackbarButtonStyle snackbarStyle
 styleable SnackbarLayout android_maxWidth actionTextColorAlpha animationMode backgroundOverlayColorAlpha elevation maxActionInlineWidth
 styleable Spinner android_entries android_popupBackground android_prompt android_dropDownWidth popupTheme
@@ -2699,7 +2781,7 @@ styleable View android_theme android_focusable paddingEnd paddingStart theme
 styleable ViewBackgroundHelper android_background backgroundTint backgroundTintMode
 styleable ViewPager2 android_orientation
 styleable ViewStubCompat android_id android_layout android_inflatedId
-xml preferences
+xml rn_dev_preferences
 xml standalone_badge
 xml standalone_badge_gravity_bottom_end
 xml standalone_badge_gravity_bottom_start

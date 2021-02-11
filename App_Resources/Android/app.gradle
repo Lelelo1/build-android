@@ -9,18 +9,22 @@
 // e.g. project.ext.googlePlayServicesVersion = "15.0.1"
 // create a file named before-plugins.gradle in the current directory and place it there
 
+// $rootDir platforms/android
+
 allprojects {
     repositories {
         google()
         jcenter()
         maven {
             // All of React Native (JS, Obj-C sources, Android binaries) is installed from npm
-            url("$rootDir/../node_modules/react-native/android/one")
+            url("$rootDir/../../node_modules/react-native/android")
         }
+        /* Is this needed for something? requires a sperate npm install
         maven {
             // Android JSC is installed from npm
-            url("$rootDir/../node_modules/jsc-android/dist/two")
+            url("$rootDir/../../node_modules/jsc-android/dist")
         }
+        */
     }
 }
 android {
@@ -34,5 +38,5 @@ android {
 }
 
 dependencies {
-  implementation "com.facebook.react:react-native:version";
+  implementation "com.facebook.react:react-native:0.63.4";
 }
