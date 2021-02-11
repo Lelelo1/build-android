@@ -62,4 +62,3 @@
 /Users/hemma/Projects/build-android/platforms/android/app/build/exploded-dependencies/75efbd0ff9f0f7d02f75f5d0d7e20ba2/classes.jar
 /Users/hemma/Projects/build-android/platforms/android/app/build/exploded-dependencies/84c6d8d3917b3fe78ad588dcf4f870b1/classes.jar
 /Users/hemma/Projects/build-android/platforms/android/app/build/exploded-dependencies/81ede3eaddab7b3eb62549702eab1878/annotation-1.1.0.jar
-/Users/hemma/Projects/build-android/platforms/android/app/build/intermediates/javac/debug
