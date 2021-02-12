@@ -42,6 +42,7 @@
     "@nativescript/webpack": "~4.0.0",
     "@pmmmwh/react-refresh-webpack-plugin": "^0.4.0-beta.5",
     "@types/react": "16.9.34",
+    "@types/react-native": "^0.63.48",
     "babel-loader": "8.0.6",
     "fork-ts-checker-webpack-plugin": "^5.1.0",
     "patch-package": "^6.2.2",

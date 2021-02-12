@@ -1,9 +1,10 @@
 import * as React from "react";
 import { RouteProp } from '@react-navigation/core';
-import { Dialogs } from '@nativescript/core';
+// import { Dialogs } from '@nativescript/core';
 import { FrameNavigationProp } from "react-nativescript-navigation";
 import { StyleSheet } from "react-nativescript";
 import { MainStackParamList } from "./NavigationParamList";
+import {Text} from "react-native";
 type HomeScreenProps = {
     route: RouteProp<MainStackParamList, "Home">,
     navigation: FrameNavigationProp<MainStackParamList, "Home">,
@@ -22,14 +23,11 @@ export function HomeScreen({ navigation }: HomeScreenProps) {
                 style={styles.button}
                 onTap={() => {
                     console.log("tapped");
-                    // console.log(com.facebook.react.modules.systeminfo.ReactNativeVersion.VERSION);
-                    
                     //@ts-ignore
                     for(let key in com.facebook){
                         console.log(key);
                     }
-                    console.log(com.facebook.react.BuildConfig.VERSION_CODE); // 1
-                    console.log(com.facebook.react.modules.systeminfo.ReactNativeVersion); // crash
+                    
                 }}
             >
                 Tap me for an alert
@@ -40,7 +38,7 @@ export function HomeScreen({ navigation }: HomeScreenProps) {
             >
                 Go to next screen
             </button>
-            
+            <Text>hello!</Text>
         </flexboxLayout>
     );
 }
